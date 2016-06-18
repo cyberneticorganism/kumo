@@ -3451,9 +3451,14 @@ img.zoom-img {
 /* End Effects */
 
 /* Custom */
-@media screen and (max-width:414px) {
+@media only screen and (min-width: 480px) {
   .hidden-mobile {
-    visibility: hidden;
-    display: none;
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hidden-desktop {
+    display: none !important;
   }
 }
