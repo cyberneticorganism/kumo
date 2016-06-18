@@ -3449,3 +3449,11 @@ img.zoom-img {
 }
 
 /* End Effects */
+
+/* Custom */
+@media screen and (max-width:414px) {
+  .hidden-mobile {
+    visibility: hidden;
+    display: none;
+  }
+}
