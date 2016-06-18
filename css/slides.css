@@ -3455,10 +3455,18 @@ img.zoom-img {
   .hidden-mobile {
     display: none !important;
   }
+
+  .visible-desktop {
+    display: block !important;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .hidden-desktop {
     display: none !important;
+  }
+
+  .visible-mobile {
+    display: block !important;
   }
 }
