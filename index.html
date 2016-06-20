@@ -147,9 +147,7 @@
 					</span>
 				</div>
 				<div class="center space">
-					<a href="index.html#">
-						<img src="assets/img/kumo-logo-white.png" alt="kumo" height="42px" max-width="169px">
-					</a>
+					<img src="assets/img/kumo-logo-white.png" alt="kumo" height="42px" max-width="169px">
 				</div>
 				<div class="right"><a class="button small kumoBlue" target="_blank" href="#">Request Invite</a></div>
 				<!--<div class="right"><a class="button empty" href="#"><svg style="width:168px;height:50px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#appstoreButton"></use></svg></a></div>-->
@@ -164,9 +162,7 @@
 					</span>
 				</div>
 				<div class="right">
-					<a href="index.html#">
-						<img src="assets/img/kumo-logo-white.png" alt="kumo" height="42px" max-width="169px">
-					</a>
+					<img src="assets/img/kumo-logo-white.png" alt="kumo" height="42px" max-width="169px">
 				</div>
 			</div>
 		</nav>
@@ -234,7 +230,7 @@
 							<div class="form-12">
 								<p class="small ae-3 opaque">We'll text you a download link to join</p>
 							</div>
-							<form action="#" method="post" id="revue-form" name="revue-form" target="_blank" autocomplete="off">
+							<form action="#" method="post" id="revue-form" name="revue-form" autocomplete="off">
 								<input type="tel" class="revue-form-field ae-5 fromCenter c444" placeholder="Phone Number*" name="member[phone]" id="memberPhone" />
 								<input type="submit" class="button kumoBlue uppercase ae-6 fromCenter" placeholder="Name" name="member[subscribe]" value="Notify Me" id="memberSubmit"/>
 								<p class="extra-small ae-3 transparent-white">*we will only send you <u>one text</u> when we launch and will <u>never share</u> your information</p>
@@ -349,7 +345,7 @@
 							</div>-->
 							<div class="form-12">
 								<p class="small ae-3 opaque">Request your invite TODAY</p>
-								<form action="#" method="post" id="revue-form" name="revue-form" target="_blank" autocomplete="off">
+								<form action="#" method="post" id="revue-form" name="revue-form" autocomplete="off">
 									<input type="tel" class="revue-form-field ae-5 fromCenter" placeholder="Phone Number*" name="member[phone]" id="memberPhone" />
 									<input type="submit" class="button kumoBlue uppercase ae-6 fromCenter" placeholder="Name" name="member[subscribe]" value="Notify Me" id="memberSubmit"/>
 									<p class="extra-small ae-3 transparent-white">*we will only send you <u>one text</u> when we launch and will <u>never share</u> your information</p>
@@ -394,11 +390,11 @@
 
 			function pushPhoneNumber(phoneNumber) {
 		    var phoneData = {phone: phoneNumber};
-		    var newPhoneKey = firebase.database().ref().child('numbers').push().key;
+		    var newPhoneKey = database.ref().child('numbers').push().key;
 		    var updates = {};
 		    updates['/numbers/' + newPhoneKey] = phoneData;
 
-		    firebase.database().ref().update(updates);
+		    database.ref().update(updates);
 			}
 
 			var submit = document.getElementById('memberPhone');
