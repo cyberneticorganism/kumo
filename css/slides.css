@@ -3450,7 +3450,8 @@ img.zoom-img {
 
 /* End Effects */
 
-/* Custom responsive */
+/* Custom CSS */
+/* Custom responsive from bootstrap */
 @-ms-viewport {
   width: device-width;
 }
@@ -3659,5 +3660,16 @@ img.zoom-img {
 @media print {
   .hidden-print {
     display: none !important;
+  }
+}
+
+/* Custom Responsive CSS */
+@media (max-width: 767px) {
+  .ae-2 p {
+    font-size: 24px !important;
+  }
+
+  p.small.ae-3 {
+    font-size: 14px !important;
   }
 }
