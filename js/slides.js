@@ -727,6 +727,11 @@ $(document).ready(function() {  "use strict";
       changeSlide($(this).index() + 1);
     });
 
+    // Logo click on mobile
+    $('#logoMobile').on("click touchend", function(){
+      changeSlide($(this).index() + 1);
+    });
+
     //Collaps to compact
     $(window).on('load resize',function(){
       var containerWidth = $(window).height() - $(window).width()*0.1112 - 100,
