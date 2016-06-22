@@ -3451,6 +3451,11 @@ img.zoom-img {
 /* End Effects */
 
 /* Custom CSS */
+#logo {
+  cursor: pointer;
+  cursor: hand;
+}
+
 /* Custom responsive from bootstrap */
 @-ms-viewport {
   width: device-width;
