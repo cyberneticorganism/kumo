@@ -373,7 +373,9 @@
 		</div>
 		<!-- Initialize Firebase -->
 		<script>
-		  var config = {
+			document.getElementById("memberSubmit").disabled = false;
+
+			var config = {
 		    apiKey: "AIzaSyDYESdc_PtkZIYT1yLuCfc9E7aKKDKugkw",
 		    authDomain: "kumo-59332.firebaseapp.com",
 		    databaseURL: "https://kumo-59332.firebaseio.com",
@@ -382,6 +384,20 @@
 		  firebase.initializeApp(config);
 
 		  var database = firebase.database();
+
+			firebase.auth().onAuthStateChanged(function(user) {
+			  if (user) {
+			    // Enable the submit button
+					document.getElementById("memberSubmit").disabled = true;
+			  } else {
+			  	// Disable the submit button
+					document.getElementById("memberSubmit").disabled = false;
+			  }
+			});
+
+			firebase.auth().signInAnonymously().catch(function(error) {
+			  console.log(error.message)
+			});
 
 			function pushPhoneNumber(phoneNumber) {
 		    var phoneData = {phone: phoneNumber};
