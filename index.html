@@ -400,12 +400,8 @@
 			});
 
 			function pushPhoneNumber(phoneNumber) {
-		    var phoneData = {phone: phoneNumber};
-		    var newPhoneKey = database.ref().child('numbers').push().key;
-		    var updates = {};
-		    updates['/numbers/' + newPhoneKey] = phoneData;
-
-		    database.ref().update(updates);
+		    console.log(''+phoneNumber);
+		    database.ref().child('numbers').push().set('' + phoneNumber);
 			}
 
 			var submit = document.getElementById('memberPhone');
