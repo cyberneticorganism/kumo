@@ -371,7 +371,7 @@
 				<circle class="dash" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,100" cx="9" cy="9" r="8" fill="none"></circle>
 			</svg>
 		</div>
-		<!-- Initialize Firebase -->
+		<!-- Firebase -->
 		<script>
 			document.getElementById("memberSubmit").disabled = false;
 
@@ -399,9 +399,11 @@
 			  console.log(error.message)
 			});
 
-			function pushPhoneNumber(phoneNumber) {
-		    console.log(''+phoneNumber);
-		    database.ref().child('numbers').push().set('' + phoneNumber);
+			function pushPhoneNumber() {
+		    var phoneNumber = document.getElementById('memberPhone').value
+		    if (phoneNumber.length > 0) {
+		      database.ref().child('numbers').push().set('' + phoneNumber);
+		    }
 			}
 
 			var submit = document.getElementById('memberPhone');
